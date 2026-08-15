@@ -5,18 +5,6 @@ export class MiniJQuery<T extends HTMLElement = HTMLElement> {
     this.elements = elements;
   }
 
-  // クラスの追加
-  addClass(...classNames: string[]): this {
-    this.elements.forEach((el) => el.classList.add(...classNames));
-    return this;
-  }
-
-  // クラスの削除
-  removeClass(...classNames: string[]): this {
-    this.elements.forEach((el) => el.classList.remove(...classNames));
-    return this;
-  }
-
   // テキストの変更・取得
   text(): string;
   text(value: string): this;
