@@ -7,9 +7,9 @@ DOM 操作の裏側の仕組み、メソッドチェーン、Declaration Merging
 
 ## 🛠 テックスタック
 
-* **ビルドツール:** [Vite](https://vitejs.dev/)
-* **言語:** [TypeScript](https://www.typescriptlang.org/)
-* **パッケージマネージャー:** pnpm
+- **ビルドツール:** [Vite](https://vitejs.dev/)
+- **言語:** [TypeScript](https://www.typescriptlang.org/)
+- **パッケージマネージャー:** pnpm
 
 ---
 
@@ -17,14 +17,20 @@ DOM 操作の裏側の仕組み、メソッドチェーン、Declaration Merging
 
 ```text
 mini-jquery/
-├── index.html
+├── index.html                  # テスト用HTML
 ├── package.json
 ├── tsconfig.json
 └── src/
-    ├── main.ts                   # 動作確認・テスト用エントリーポイント
-    └── mini-jquery/
-        ├── core.ts               # MiniJQuery クラス本体と型定義
-        ├── index.ts              # エントリーポイント ($ 関数の定義・モジュール結合)
-        └── plugins/
-            └── css.ts            # css() メソッドのプロトタイプ拡張プラグイン
+    ├── main.ts                 # 動作確認用（lib/index から $ を呼び出す）
+    │
+    └── lib/                    # 💡 自作ライブラリのコードはすべてここに入れる
+        ├── index.ts            # ライブラリの総合窓口 ($ 関数のエクスポート)
+        ├── core.ts             # MiniJQuery クラス本体
+        ├── modules/            # 標準機能モジュール
+        │   ├── styles/
+        │   │   └── css.ts
+        │   └── dom/
+        │       └── attr.ts
+        └── utils/              # 内部用ヘルパー関数（例: 型チェック関数など）
+            └── isElement.ts
 ```

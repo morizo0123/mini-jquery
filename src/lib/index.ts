@@ -1,5 +1,5 @@
 import { MiniJQuery } from './core';
-import './plugins/css';
+import './modules/css';
 
 // $ 関数のオーバーロード定義
 // 1. タグ名指定: $('button') -> MiniJQuery<HTMLButtonElement>

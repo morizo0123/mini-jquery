@@ -1,4 +1,4 @@
-import { $ } from './mini-jquery';
+import { $ } from './lib';
 
 $('button')
   .addClass('btn-primary')
