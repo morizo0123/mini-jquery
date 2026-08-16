@@ -8,4 +8,4 @@ $('button')
     console.log('Button clicked:', this.tagName);
   });
 
-// $<HTMLInputElement>("#username").val("John Doe").css("borderColor", "green");
+$<HTMLInputElement>('#username').val('John Doe').css('borderColor', 'green');
