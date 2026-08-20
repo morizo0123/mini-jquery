@@ -5,17 +5,6 @@ export class MiniJQuery<T extends HTMLElement = HTMLElement> {
     this.elements = elements;
   }
 
-  // テキストの変更・取得
-  // text(): string;
-  // text(value: string): this;
-  // text(value?: string): string | this {
-  //   if (value !== undefined) {
-  //     this.elements.forEach((el) => (el.textContent = value));
-  //     return this;
-  //   }
-  //   return this.elements[0]?.textContent ?? '';
-  // }
-
   // イベントハンドラ
   on<K extends keyof HTMLElementEventMap>(
     type: K,

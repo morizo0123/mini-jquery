@@ -7,6 +7,8 @@ import './modules/val';
 import './modules/attr';
 import './modules/text';
 import './modules/toggle-class';
+import './modules/show-hide';
+import './modules/eq';
 
 // $ 関数のオーバーロード定義
 // 1. タグ名指定: $('button') -> MiniJQuery<HTMLButtonElement>
