@@ -9,6 +9,9 @@ import './modules/text';
 import './modules/toggle-class';
 import './modules/show-hide';
 import './modules/eq';
+import './modules/append';
+import './modules/children';
+import './modules/html';
 
 // $ 関数のオーバーロード定義
 // 1. タグ名指定: $('button') -> MiniJQuery<HTMLButtonElement>
