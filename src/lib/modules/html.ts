@@ -46,5 +46,5 @@ MiniJQuery.prototype.html = function (
     }
   });
 
-  return true;
+  return this;
 };

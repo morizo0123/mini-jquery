@@ -1,4 +1,5 @@
 import { MiniJQuery } from './core';
+import './modules/event';
 import './modules/css';
 import './modules/add-class';
 import './modules/remove-class';
@@ -12,6 +13,9 @@ import './modules/eq';
 import './modules/append';
 import './modules/children';
 import './modules/html';
+import './modules/empty';
+import './modules/prepend';
+import './modules/remove';
 
 // $ 関数のオーバーロード定義
 // 1. タグ名指定: $('button') -> MiniJQuery<HTMLButtonElement>

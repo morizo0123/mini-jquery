@@ -5,7 +5,7 @@ $('button')
   .css({ color: 'white', backgroundColor: 'blue' })
   .on('click', function () {
     // this は HTMLButtonElement 型
-    console.log('Button clicked:', this.tagName);
+    console.log('Button clicked');
   });
 
 $<HTMLInputElement>('#username').val('John Doe').css('borderColor', 'green');
