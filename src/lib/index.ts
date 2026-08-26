@@ -16,6 +16,8 @@ import './modules/html';
 import './modules/empty';
 import './modules/prepend';
 import './modules/remove';
+import './modules/first';
+import './modules/last';
 
 // $ 関数のオーバーロード定義
 // 1. タグ名指定: $('button') -> MiniJQuery<HTMLButtonElement>
