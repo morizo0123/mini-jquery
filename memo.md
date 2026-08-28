@@ -43,6 +43,25 @@ button.removeEventListener('click', handler);
 └──────────────────────────────────────┘
 ```
 
+イメージ図
+ブラウザ内部のメモリの中では、DOM 要素は以下のようなイメージで保持されています。
+
+```
+HTMLButtonElement オブジェクト (メモリ上)
+┌──────────────────────────────────────────────────┐
+│ id: "btn"                                        │
+│ className: "active"                              │
+│ textContent: "送信"                               │
+│ addEventListener: ƒ (...)                        │
+│                                                  │
+│ ★ 後から勝手に追加したプロパティ                      │
+│ [Symbol('listeners')]: [                         │
+│   { type: 'click', listener: ƒ myFunc },         │
+│   { type: 'mouseover', listener: ƒ myHover }     │
+│ ]                                                │
+└──────────────────────────────────────────────────┘
+```
+
 ## コードの流れを 1 つずつ紐解く
 
 ① 秘密のメモ帳の「名前」を決める (Symbol)
